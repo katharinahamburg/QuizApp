@@ -1,4 +1,40 @@
 body {
-    background-color: #007AFF !important;
-    min-height: 100vh;
+  background-color: #2a8da6 !important;
+  margin: 0;
+
 }
+
+.container {
+  background-color: #2a8da6 !important;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-top: 5%;
+  min-height: 620px;
+  
+}
+
+.card-body {
+    width: 30rem;
+    background-color:white;
+}
+
+.card img {
+    width: 30rem;
+}
+
+.card {
+  margin-top: 4px;
+  width: 25rem;
+}
+
+.card-title {
+    width: 30rem;
+}
+.question-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  text-align: center;
+}
+
