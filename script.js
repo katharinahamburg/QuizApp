@@ -141,7 +141,7 @@ function resetAnswerButtons() {
 
 
 function restartGame() {
-    document.getElementById('hide-by-win').src = "./img/quiz.png";
+    document.getElementById('hide-by-win').src = "./img/bird.jpg";
     document.getElementById('endScreen').style = 'display: none;';  
     document.getElementById('questionBody').style = "";   
     

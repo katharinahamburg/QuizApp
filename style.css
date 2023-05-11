@@ -33,3 +33,9 @@
   font-size: 38px;
   margin-bottom: 28px;
 }
+
+.button-restart {
+display: flex;
+justify-content: center;
+margin-top: 16px;
+}
