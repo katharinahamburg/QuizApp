@@ -43,8 +43,11 @@ let questions = [
 ];
 
 let rightQuestions = 0;
-
 let currentQuestion = 0;
+let audioSuccess = new Audio('sounds/success.mp3');
+let audioFail = new Audio('sounds/fail.mp3');
+
+
 
 function init() {
     allQuestions()
@@ -102,11 +105,12 @@ function answer(index) {
     if (selectedQuestionNumber == question['right_answer']) {  
         console.log('That is right!');  
         document.getElementById(index).parentNode.classList.add('bg-success'); 
-                                
+        audioSuccess.play();                          
         rightQuestions++; 
                             } else {   
         console.log('falsche antwort!');
         document.getElementById(index).parentNode.classList.add('bg-danger');
+        audioFail.play();
         document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success'); 
     }
     document.getElementById('next-button').disabled = false; 
