@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QuizApp</title>
+    <title>QuizzzApp</title>
 
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
@@ -20,49 +20,81 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
   </head>
 
-  <body>
+ 
+<body onload="init()">
     <nav class="navbar bg-body-tertiary">
-      <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1">QuizApp</span>
-      </div>
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">QuizApp</span>
+        </div>
     </nav>
-<div class="container">
-    <div class="quiz-container">
-      <div class="card" style="width: 18rem">
-        <img src="./img/bird.jpg" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Frage</h5>
-          <div class="card">
-            <div class="card-body">
-              Answer
-            </div>
-        </div>
-            <div class="card">
-                <div class="card-body">
-                  Answer
-                </div>
-            </div>
-                <div class="card">
-                    <div class="card-body">
-                      Answer
-                    </div>
-                </div>
-                    <div class="card">
-                        <div class="card-body">
-                          Answer
-                        </div>
-                    </div>
 
-                    <div class="question-footer">
-                        <b>1.</b> von <b>5</b> Fragen
-                        <button type="button" class="btn btn-secondary">Next Question</button>
+    <div class="main-card-container">
+        <div class="card" style="width: 30rem;">
+            <img src="./img/bird.jpg" class="card-img-top" alt="quiz-img" id="hide-by-win">
+
+            <div class="progress">  
+                <div class="progress-bar bg-info" id="progress-bar" role="progressbar" aria-label="Info example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                 style="width: 0%">0%</div>
+              </div>
+           
+
+            <div class="card-body" id="endScreen" style="display: none;">
+                <div class="text-center final-headline">Feddich!
+                </div>
+                <div class="text-center"><h2>Pokaaaaal verdient!</h2></div>
+
+
+               
+
+                <div class="text-center">Du hast <b id="rightQuestionsAnswered">X</b> Fragen von <b
+                        id="allQuestionsAnswered">X</b> geschafft!</div>
+                        <div class="button-center">
+                            <button onclick="restartGame()" class="btn btn-secondary">Erneut Spielen</button>
+                        </div>
+            </div>
+
+            
+            
+
+            <div class="card-body" id="questionBody">
+                <h5 class="card-title" id="question">Frage</h5>
+
+                <div class="card quiz-answer-card mb-3">
+                    <div class="card-body" id="answer1" onclick="answer('answer1')">
+                        Antwort
                     </div>
-          </div>
+                </div>
+                <div class="card quiz-answer-card mb-3">
+                    <div class="card-body" id="answer2" onclick="answer('answer2')">
+                        Antwort
+                    </div>
+                </div>
+                <div class="card quiz-answer-card mb-3">
+                    <div class="card-body" id="answer3" onclick="answer('answer3')">
+                        Antwort
+                    </div>
+                </div>
+                <div class="card quiz-answer-card mb-3">
+                    <div class="card-body" id="answer4" onclick="answer('answer4')">
+                        Antwort
+                    </div>
+                </div>
+
+                <div class="question-footer">
+                    <span><b id="current-question-number">1.</b> von <b id="all-questions-number">5</b> Fragen</span>
+
+                    <button onclick="nextQuestion()" class="btn btn-secondary" id="next-button" disabled>Nächste
+                        Frage</button>
+                </div>
+
+            </div>
         </div>
-      </div>
     </div>
-</div>
+
+    
 </body>
+
 </html>
