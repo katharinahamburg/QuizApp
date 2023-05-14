@@ -44,17 +44,22 @@ let questions = [
 
 let rightQuestions = 0;
 let currentQuestion = 0;
+
 let audioSuccess = new Audio("sounds/success.mp3");
 let audioFail = new Audio("sounds/fail.mp3");
 
+
+
+
 function init() {
-  allQuestions();
   showCurrentQuestion();
 }
+
 
 function allQuestions() {
   document.getElementById("all-questions-number").innerHTML = questions.length;
 }
+
 
 function showCurrentQuestion() {
   if (gameIsOver()) {
@@ -84,6 +89,7 @@ function showEndScreen() {
   document.getElementById("allQuestionsAnswered").innerHTML = questions.length;
   document.getElementById("rightQuestionsAnswered").innerHTML = rightQuestions;
   document.getElementById("hide-by-win").src = "./img/pokal.png";
+ 
 }
 
 function updateToNextQuestion() {
